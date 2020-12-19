@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --mainBlack: #021B27;
+    --mainDarkBlue: #03273A;
+    --lightBlue: #086D9B;
+    --mainWhite: #ffffff;
+    --lightWhite: #fffef8;
+    --accentPink: #FF999B;
+    --mainFont: 'Metrophobic', sans-serif;
+    --headingFont: 'Montserrat', sans-serif; 
+    --accentFont: 'Cardo', serif;
+}
+body{
+   background-color: var(--mainDarkBlue);
+   color: var(--mainWhite);
+}
+p,h3, a {
+  font-family: var(--mainFont);
+}
+h2,h1{
+  font-family: var(--headingFont);
+}
+h4{
+  margin-top: 1rem;
+  font-family: var(--accentFont);
+}
+header{
+  background-color: var(--mainBlack);
+  grid-area: 1 / 1 / 2 / 6;
+  padding: 1rem 2rem;
+  display: flex;
+}
+#about h3{
+    margin-top: 0.25rem
+}
+#project-list h3 {
+  text-align: center;
+  margin: 0.2rem;
+  color: var(--lightWhite);
+}
+#about {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#about h2,h1, .about-project h2{
+  color: var(--accentPink);
+}
+.about-project h1{
+  text-align: center;
+  margin: 1rem;
+}
+.about-links{
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.about-project p{
+  margin-bottom: 2rem;
+}
+.about-project{
+ margin: 1rem;
+}
+.about-project.reviews{
+  margin: 2rem;
+}
+#about > *:not(:last-child){
+  margin-bottom: 2rem;
+}
+
+#other-links ul {
+  display: flex;
+  margin-top: 0.5rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+#links ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+#links a,
+#other-links a {
+  color: var(--mainWhite);
+  text-decoration: none;
+  margin-right: 2rem;
+}
+.about-project a {
+  color: var(--mainWhite);
+  text-decoration: none;
+}
+.about-project a:not(:last-child){
+  margin-right: 1rem;
+}
+
+#other-links a:hover{
+  color: var(--mainWhite);
+  margin-right: 2rem;
+  text-decoration: underline;
+  text-decoration-color: var(--accentPink);
+  text-decoration-thickness: 2px;
+}
+#links a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accentPink);
+  text-decoration-thickness: 3px;
+}
+#project-list {
+    margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.buttons a {
+  text-decoration: none;
+  color:var(--lightWhite);
+  padding: 10px;
+}
+.buttons a {
+  text-decoration: none;
+  color:var(--lightWhite);
+  padding: 10px;
+}
+.buttons a:hover {
+  text-decoration: underline;
+}
+
+#todo-link{
+ text-decoration: underline;
+  margin: 0 !important;
+  margin-right: 4px;
+}
+.project {
+  background-color: #054461;
+  box-shadow: 2px 2px 3px 0px rgba(1,14,19,1);;
+  width: 220px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.project:hover {
+  transform: scale(1.05);
+}
+.screenshot {
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 150px;
+
+}
+
+@media screen and (min-width: 800px) {
+  .about-project.reviews{
+    margin: 4rem auto;
+  }
+  body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.25fr repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  #about {
+    grid-area: 2 / 1 / 6 / 3;
+  }
+  .about-project{
+    grid-area: 2 / 2 / 6 / 5;
+  }
+  #project-list {
+    grid-area: 2 / 3 / 5 / 6;
+  }
+}

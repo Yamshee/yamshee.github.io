@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Metrophobic&family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <title>Vitamin D Calc</title>
+</head>
+<body>
+    <header id='links'>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="CJacksonResume.pdf" target="_blank">Resume</a></li>
+          <li><a href="https://www.linkedin.com/in/christina-jackson-dc-a56978138" target="_blank">LinkedIn</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="mailto:codingchristina@gmail.com" target="_blank">Email</a></li>
+        </ul>
+      </header>
+      <section class='about-project'>
+        <h1>Vitamin D Calculator</h1>
+        <div class="about-links">
+          <a href="https://github.com/ChristinaJackson/sunData2" target="_blank">Code</a>
+          <a href="https://gifted-nightingale-ac72ea.netlify.app/ " target="_blank">Live</a>
+        </div>
+        <h2>The Why:</h2>
+        <p>I built this because I was diagnosed with VERY low vitamin D and wanted to improve my vitamin D levels. When I went to try to find a way to determine
+            how long I needed to be in the sun to get my daily amount I found there was no easy way to calculate the amount of time I needed to spend outside.
+            The app takes in a persons skin type and uses the Mapbox api to search for a locations coordinates which are then forwarded to the DarkSky API to 
+            determine current UV Index. From there the app displays the amount of time they need to spend in the sun to get their vitamin D 
+            for the day. 
+        </p>
+      <div>
+        <h2>Tech/features used:</h2>
+        <p>HTML/CSS, JavaScript, Netlify, Darksky and Mapbox API, Axios, Amazon Lambda Functions</p>
+      </div>
+      <div id='other-links'>
+        <h2>Challenges and things to improve:</h2>
+        <p>My challenge here was creating an app I could share without exposing my either of my API keys. This is where Netlify and the Lambda functions came into play.
+            The API keys are stored on Netlify and when the user makes a search, Netlify plugs in the values. In the future I would like to limit the amount of requests a user can make
+            and store previous searches that have occurred in the last hour to limit the number of API calls. I would also like to publish this app, however Darksky has been acquired by Apple and I
+            only have access to this API until the end of 2021. 
+        </p>
+      </div>
+      </section>
+</body>
+</html>
